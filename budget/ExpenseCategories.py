@@ -1,6 +1,6 @@
-from lib2to3.pgen2.token import EQUAL
 from . import Expense
 import matplotlib.pyplot as plt
+import timeit
 
 def main():
     expenses = Expense.Expenses()
@@ -14,6 +14,12 @@ def main():
     for a,b in zip(divided_for_loop, divided_set_comp):
         if not (a.issubset(b) and b.issubset(a)):
             print("Sets are NOT equal by subset test")
+
+    timeit.timeit(stmt= "pass", setup=
+    '''
+    ''',
+    number=100000, globals=globals()
+    )
 
 
 
