@@ -1,3 +1,5 @@
+from . import Expense
+
 class BudgetList:
     def __init__(self, budget):
         self.budget = budget
@@ -21,6 +23,16 @@ class BudgetList:
 
 def main():
     myBudgetList = BudgetList(1200)
+    expenses = Expense.Expenses()
+    expenses.read_expenses('data/spending_data.csv')
+
+    for expense in expenses.list:
+        myBudgetList.append(expense.amount)
     
+    print('The count of all expenses: ' + str(len(myBudgetList))
+
+
+
+
 
 
