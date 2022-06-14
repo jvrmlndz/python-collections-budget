@@ -45,7 +45,15 @@ class Expenses():
         necessary_expenses = {x for x in self.list
                                     if x.category == 'Phone' or x.category == 'Auto and Gas' or x.category == 'Classes'
                                     or x.category == 'Utilities' or x.category == 'Mortgage'}
-                                    
+
+        food_expenses = {x for x in self.list
+                                    if x.category == 'Groceries' or x.category == 'Eating out'}
+        
+        unnecesary_expenses = set(self.list) - necessary_expenses - food_expenses
+
+        return [necessary_expenses, food_expenses, unnecesary_expenses]
+        
+
         
         
         
